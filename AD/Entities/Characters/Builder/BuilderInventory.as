@@ -383,7 +383,7 @@ void onRender(CSprite@ this)
 							else
 							{
 								CBlob@[] blobsInRadius;
-								if (map.getBlobsInRadius( middle, map.tilesize, @blobsInRadius ))
+								if (map.getBlobsInRadius( middle, map.tilesize, @blobsInRadius )) 
 								{
 									for (uint i = 0; i < blobsInRadius.length; i++)
 									{
@@ -391,7 +391,7 @@ void onRender(CSprite@ this)
 										if (!b.isAttached())
 										{
 											Vec2f bpos = b.getPosition();
-											GUI::DrawRectangle( getDriver().getScreenPosFromWorldPos(bpos + Vec2f(b.getWidth()/-2.0f, b.getHeight()/-2.0f)),
+											GUI::DrawRectangle( getDriver().getScreenPosFromWorldPos(bpos + Vec2f(b.getWidth()/-2.0f, b.getHeight()/-2.0f)), 
 																getDriver().getScreenPosFromWorldPos(bpos + Vec2f(b.getWidth()/2.0f, b.getHeight()/2.0f)),
 																SColor(0x65ed1202) );
 										}
