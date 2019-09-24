@@ -45,7 +45,7 @@ mod_configs = [
 		 			 	'Mod by THD')
 		},
 		'mods': {
-			'Shiprekt': '',
+			'Shiprekt': ''
 		}
 	},
 	{
@@ -59,6 +59,18 @@ mod_configs = [
 		'mods': {
 			'Parkour+': '',
 			'PlayerHeads': 'PlayerHeads:PlayerHeads'
+		}
+	},
+	{
+		'name': 'Official Modding Server: Grobbers 3D!',
+		'autoconfig' : {
+		 	'sv_gamemode': 'tdm',
+		 	'sv_maxplayers': 30,
+		 	'sv_info': ('First 3D mod in KAG, '
+		 			 	'Mod by GoldenGuy, Sprites by Jenny! ')
+		},
+		'mods': {
+			'Grobber3D_demo': ''
 		}
 	},
 ]
