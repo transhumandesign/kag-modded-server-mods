@@ -81,7 +81,7 @@ void onSetPlayer(CRules@ this, CBlob@ blob, CPlayer@ player)
     int team = player.getTeamNum();
     if(player.getCoins() < min_coins)
         player.server_setCoins(min_coins);
-    
+
 }
 
 //handles rogue traders!!
@@ -150,42 +150,42 @@ void MakeTradeMenu(CBlob@ trader)
 	addTradeSeparatorItem(trader, "$MENU_GENERIC$", Vec2f(3, 1));
 
 	if (cost_bombs > 0)
-		addItemForCoin(trader, "Bomb", cost_bombs, true, "$mat_bombs$", "mat_bombs", descriptions[1]);
+		addItemForCoin(trader, "Bomb", cost_bombs, true, "$mat_bombs$", "mat_bombs", Descriptions::bomb);
 
 	if (cost_waterbombs > 0)
-		addItemForCoin(trader, "Water Bomb", cost_waterbombs, true, "$mat_waterbombs$", "mat_waterbombs", descriptions[50]);
+		addItemForCoin(trader, "Water Bomb", cost_waterbombs, true, "$mat_waterbombs$", "mat_waterbombs", Descriptions::waterbomb);
 
 	if (cost_keg > 0)
-		addItemForCoin(trader, "Keg", cost_keg, true, "$keg$", "keg", descriptions[19]);
+		addItemForCoin(trader, "Keg", cost_keg, true, "$keg$", "keg", Descriptions::keg);
 
 	if (cost_mine > 0)
-		addItemForCoin(trader, "Mine", cost_mine, true, "$mine$", "mine", descriptions[20]);
+		addItemForCoin(trader, "Mine", cost_mine, true, "$mine$", "mine", Descriptions::mine);
 
 
 	if (cost_arrows > 0)
-		addItemForCoin(trader, "Arrows", cost_arrows, true, "$mat_arrows$", "mat_arrows", descriptions[2]);
+		addItemForCoin(trader, "Arrows", cost_arrows, true, "$mat_arrows$", "mat_arrows", Descriptions::arrows);
 
 	if (cost_waterarrows > 0)
-		addItemForCoin(trader, "Water Arrows", cost_waterarrows, true, "$mat_waterarrows$", "mat_waterarrows", descriptions[50]);
+		addItemForCoin(trader, "Water Arrows", cost_waterarrows, true, "$mat_waterarrows$", "mat_waterarrows", Descriptions::waterarrows);
 
 	if (cost_firearrows > 0)
-		addItemForCoin(trader, "Fire Arrows", cost_firearrows, true, "$mat_firearrows$", "mat_firearrows", descriptions[32]);
+		addItemForCoin(trader, "Fire Arrows", cost_firearrows, true, "$mat_firearrows$", "mat_firearrows", Descriptions::firearrows);
 
 	if (cost_bombarrows > 0)
-		addItemForCoin(trader, "Bomb Arrow", cost_bombarrows, true, "$mat_bombarrows$", "mat_bombarrows", descriptions[51]);
+		addItemForCoin(trader, "Bomb Arrow", cost_bombarrows, true, "$mat_bombarrows$", "mat_bombarrows", Descriptions::bombarrows);
 
 	if (cost_boulder > 0)
-		addItemForCoin(trader, "Boulder", cost_boulder, true, "$boulder$", "boulder", descriptions[17]);
+		addItemForCoin(trader, "Boulder", cost_boulder, true, "$boulder$", "boulder", Descriptions::boulder);
 
 	if (cost_burger > 0)
 		addItemForCoin(trader, "Burger", cost_burger, true, "$food$", "food", "Food for healing. Don't think about this too much.");
 
 
 	if (cost_catapult > 0)
-		addItemForCoin(trader, "Catapult", cost_catapult, true, "$catapult$", "catapult", descriptions[5]);
+		addItemForCoin(trader, "Catapult", cost_catapult, true, "$catapult$", "catapult", Descriptions::catapult);
 
 	if (cost_ballista > 0)
-		addItemForCoin(trader, "Ballista", cost_ballista, true, "$ballista$", "ballista", descriptions[6]);
+		addItemForCoin(trader, "Ballista", cost_ballista, true, "$ballista$", "ballista", Descriptions::ballista);
 
 }
 
