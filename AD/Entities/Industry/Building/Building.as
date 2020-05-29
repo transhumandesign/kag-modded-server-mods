@@ -25,15 +25,15 @@ void onInit(CBlob@ this)
 	this.Tag(SHOP_AUTOCLOSE);
 
 	{
-		ShopItem@ s = addShopItem(this, "Builder Shop", "$buildershop$", "buildershop", descriptions[54]);
+		ShopItem@ s = addShopItem(this, "Builder Shop", "$buildershop$", "buildershop", Descriptions::buildershop);
 		AddRequirement(s.requirements, "blob", "mat_wood", "Wood", COST_WOOD_FACTORY);
 	}
 	{
-		ShopItem@ s = addShopItem(this, "Quarters", "$quarters$", "quarters", descriptions[59]);
+		ShopItem@ s = addShopItem(this, "Quarters", "$quarters$", "quarters", Descriptions::quarters);
 		AddRequirement(s.requirements, "blob", "mat_wood", "Wood", COST_WOOD_FACTORY);
 	}
 	{
-		ShopItem@ s = addShopItem(this, "Archer Shop", "$archershop$", "archershop", descriptions[56]);
+		ShopItem@ s = addShopItem(this, "Archer Shop", "$archershop$", "archershop", Descriptions::archershop);
 		AddRequirement(s.requirements, "blob", "mat_wood", "Wood", COST_WOOD_FACTORY);
 	}
 

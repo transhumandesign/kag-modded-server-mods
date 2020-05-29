@@ -22,24 +22,10 @@ mod_configs = [
 	# }
 
 	{
-		'name': 'The Waste Kind',
-		'autoconfig' : {
-		 	'sv_gamemode': 'CTF',
-		 	'sv_maxplayers': 10,
-		 	'sv_info': ('Single-class high-detail tactical CTF - '
-		 				'detailed maps, dashing, grenades and drama!  '
-		 			 	'Mods by 8x, Jaytlebee, Chrispin + More')
-		},
-		'mods': {
-			'TheWasteKind': '',
-			'Explosives': '',
-		}
-	},
-	{
-		'name': 'Attack and Defence',
+		'name': 'Official Modding Server: Attack and Defence!',
 		'autoconfig' : {
 		 	'sv_gamemode': 'AD',
-		 	'sv_maxplayers': 14,
+		 	'sv_maxplayers': 20,
 		 	'sv_info': ('Build an impenetrable fortress, '
 		 			 	'then defend against a fearsome siege! '
 		 			 	'Custom Heads Mod Included!  '
@@ -51,39 +37,40 @@ mod_configs = [
 		}
 	},
 	{
-		'name': 'Custom Heads CTF',
-		'autoconfig' : {
-		 	'sv_gamemode': 'CTF',
-		 	'sv_maxplayers': 14,
-		 	'sv_info': ('Vanilla CTF with custom heads!  '
-		 			 	'Mod by Skinney and makmoud98')
-		},
-		'mods': {
-			'PlayerHeads': 'PlayerHeads:PlayerHeads'
-		}
-	},
-	{
-		'name': 'Shiprekt',
+		'name': 'Official Modding Server: Shiprekt',
 		'autoconfig' : {
 		 	'sv_gamemode': 'TDM',
-		 	'sv_maxplayers': 12,
+		 	'sv_maxplayers': 18,
 		 	'sv_info': ('Construct a ship from random parts and destroy the enemy core to win!  '
 		 			 	'Mod by THD')
 		},
 		'mods': {
-			'Shiprekt': '',
+			'Shiprekt': ''
 		}
 	},
 	{
-		'name': 'Laser Wars',
+		'name': 'Official Modding Server: Archer Parkour!',
 		'autoconfig' : {
-		 	'sv_gamemode': 'FW',
-		 	'sv_maxplayers': 10,
-		 	'sv_info': ('Tactical Sci-Fi CTF - multiple classes, jetpacks, and weapons!  '
-		 			 	'Mod by Aphelion')
+		 	'sv_gamemode': 'Parkour+',
+		 	'sv_maxplayers': 20,
+		 	'sv_info': ('Reach the end as fast as you can!, '
+		 			 	'Mod by Monkey_Feats! ')
 		},
 		'mods': {
-			'LaserWars': ''
+			'Parkour+': '',
+			'PlayerHeads': 'PlayerHeads:PlayerHeads'
+		}
+	},
+	{
+		'name': 'Official Modding Server: Grobbers 3D!',
+		'autoconfig' : {
+		 	'sv_gamemode': 'tdm',
+		 	'sv_maxplayers': 30,
+		 	'sv_info': ('First 3D mod in KAG, '
+		 			 	'Mod by GoldenGuy, Sprites by Jenny! ')
+		},
+		'mods': {
+			'Grobber3D_demo': ''
 		}
 	},
 ]

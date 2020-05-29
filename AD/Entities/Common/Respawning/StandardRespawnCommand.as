@@ -16,10 +16,10 @@ void InitRespawnCommand(CBlob@ this)
 	this.addCommandID("class menu");
 }
 
-bool isInRadius(CBlob@ this, CBlob @caller)
-{
-	return ((this.getPosition() - caller.getPosition()).Length() < this.getRadius() * 2.0f + caller.getRadius());
-}
+// bool isInRadius(CBlob@ this, CBlob @caller)
+// {
+// 	return ((this.getPosition() - caller.getPosition()).Length() < this.getRadius() * 2.0f + caller.getRadius());
+// }
 
 bool canChangeClass(CBlob@ this, CBlob@ blob)
 {
@@ -167,4 +167,38 @@ void PutInvInStorage(CBlob@ blob)
 				return;
 			}
 		}
+}
+
+const bool enable_quickswap = false;
+void CycleClass(CBlob@ this, CBlob@ blob)
+{
+	//get available classes
+	PlayerClass[]@ classes;
+	if (this.get("playerclasses", @classes))
+	{
+		CBitStream params;
+		PlayerClass @newclass;
+
+		//find current class
+		for (uint i = 0; i < classes.length; i++)
+		{
+			PlayerClass @pclass = classes[i];
+			if (pclass.name.toLower() == blob.getName())
+			{
+				//cycle to next class
+				@newclass = classes[(i + 1) % classes.length];
+				break;
+			}
+		}
+
+		if (newclass is null)
+		{
+			//select default class
+			@newclass = getDefaultClass(this);
+		}
+
+		//switch to class
+		write_classchange(params, blob.getNetworkID(), newclass.configFilename);
+		this.SendCommand(SpawnCmd::changeClass, params);
+	}
 }

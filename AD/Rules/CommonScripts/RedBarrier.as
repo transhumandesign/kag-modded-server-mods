@@ -85,10 +85,10 @@ void getBarrierPositions(f32 &out x1, f32 &out x2, f32 &out y1, f32 &out y2)
 {
 	CMap@ map = getMap();
 	const f32 mapWidth = map.tilemapwidth * map.tilesize;
-	const f32 mapMiddle = mapWidth * 0.4f;
+	const f32 mapMiddle = mapWidth * 0.5f;
 	const f32 barrierWidth = BARRIER_PERCENT * mapWidth;
-	x1 = 0;//mapMiddle - barrierWidth;
-	x2 = barrierWidth*2;
+	x1 = mapMiddle - barrierWidth;
+	x2 = mapMiddle + barrierWidth;
 	y2 = map.tilemapheight * map.tilesize;
 	y1 = -y2;
 	y2 *= 2.0f;
@@ -108,7 +108,7 @@ void addBarrier()
 	Vec2f ul(x1, y1);
 	Vec2f lr(x2, y2);
 
-	if (map.getSectorAtPosition((ul + lr) * 0.4, "barrier") is null)
+	if (map.getSectorAtPosition((ul + lr) * 0.5, "barrier") is null)
 		map.server_AddSector(Vec2f(x1, y1), Vec2f(x2, y2), "barrier");
 }
 
@@ -126,5 +126,5 @@ void removeBarrier()
 	Vec2f ul(x1, y1);
 	Vec2f lr(x2, y2);
 
-	map.RemoveSectorsAtPosition((ul + lr) * 0.4 , "barrier");
+	map.RemoveSectorsAtPosition((ul + lr) * 0.5 , "barrier");
 }

@@ -1,5 +1,6 @@
 // Builder logic
 
+#include "Requirements.as"
 #include "BuilderCommon.as";
 #include "PlacementCommon.as";
 #include "Help.as";
